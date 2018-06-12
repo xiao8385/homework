@@ -1,0 +1,20 @@
+<button (click)="regenerate()">重新生成</button>
+<div id="exerciseForm">
+  <div *ngIf="verticalList" style="background:linear-gradient(180deg, #B2C2C7 0%, #7B8F95 100%); color:#FFFFFF;">
+    <div class="ui-g">
+      <div class="ui-g" style="padding-top: 5px; padding-bottom: 5px;font-size:20px;">竖式并验算</div>
+    </div>
+  </div>
+  <div class="ui-g ui-fluid">
+    <div class="ui-g-6 vertical-style" style="font-size:14px;" *ngFor="let detail of verticalList">{{detail.no}} . {{detail.formula}} = </div>
+  </div>
+  <div></div>
+  <div *ngIf="oralList" style="background:linear-gradient(180deg, #B2C2C7 0%, #7B8F95 100%); color:#FFFFFF;">
+    <div class="ui-g">
+      <div class="ui-g" style="padding-top: 5px; padding-bottom: 5px;font-size:20px;">口算</div>
+    </div>
+  </div>
+  <div class="ui-g ui-fluid">
+    <div class="ui-g-6 oral-style" style="font-size:14px;" *ngFor="let detail of oralList">{{detail.no}} . {{detail.formula}} = </div>
+  </div>
+</div>
